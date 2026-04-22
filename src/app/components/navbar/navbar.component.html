@@ -1,0 +1,41 @@
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a routerLink="/" class="logo">My Girl</a>
+
+    <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" [class.open]="isMenuOpen" (click)="isMenuOpen=false">
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/categories" routerLinkActive="active">Shop</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/products" routerLinkActive="active">Products</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/orders" routerLinkActive="active">Orders</a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/profile" routerLinkActive="active">
+          <span class="user-name">👤 {{ currentUser?.name }}</span>
+        </a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <a routerLink="/cart" class="cart-link" routerLinkActive="active">
+          🛒
+          <span class="badge" *ngIf="cartCount > 0">{{ cartCount }}</span>
+        </a>
+      </li>
+      <li *ngIf="isLoggedIn">
+        <button class="btn-logout" (click)="logout()">Logout</button>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/login" class="btn-nav">Login</a>
+      </li>
+      <li *ngIf="!isLoggedIn">
+        <a routerLink="/register" class="btn-nav-outline">Register</a>
+      </li>
+    </ul>
+  </div>
+</nav>

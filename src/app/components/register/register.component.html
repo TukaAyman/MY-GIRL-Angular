@@ -1,0 +1,69 @@
+<div class="auth-page">
+  <div class="auth-left">
+    <div class="auth-decoration">
+      <div class="deco-shape d1"></div>
+      <div class="deco-shape d2"></div>
+      <div class="deco-text">
+        <h2>Join My Girl</h2>
+        <p>Create your account and step into a world of curated luxury beauty.</p>
+        <div class="deco-items">
+          <span>🌸 Personalized Picks</span>
+          <span>💝 Exclusive Member Deals</span>
+          <span>✨ Early Access to New Arrivals</span>
+          <span>🎀 Free Gift Wrapping</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="auth-right">
+    <div class="auth-card">
+      <div class="auth-header">
+        <h1>Create Account</h1>
+        <p>Your beauty journey starts here</p>
+      </div>
+
+      <div class="auth-error" *ngIf="error">{{ error }}</div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" formControlName="name" placeholder="Your name"
+            [class.error]="name.invalid && name.touched" />
+          <div class="error-msg" *ngIf="name.touched && name.errors?.['required']">Name is required</div>
+          <div class="error-msg" *ngIf="name.touched && name.errors?.['minlength']">Minimum 2 characters</div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" placeholder="your@email.com"
+            [class.error]="email.invalid && email.touched" />
+          <div class="error-msg" *ngIf="email.touched && email.errors?.['required']">Email is required</div>
+          <div class="error-msg" *ngIf="email.touched && email.errors?.['email']">Enter a valid email</div>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" formControlName="password" placeholder="Min. 8 characters"
+            [class.error]="password.invalid && password.touched" />
+          <div class="error-msg" *ngIf="password.touched && password.errors?.['required']">Password is required</div>
+          <div class="error-msg" *ngIf="password.touched && password.errors?.['minlength']">Minimum 8 characters</div>
+        </div>
+
+        <div class="form-group">
+          <label>Confirm Password</label>
+          <input type="password" formControlName="confirmPassword" placeholder="Repeat password"
+            [class.error]="(confirmPassword.touched && confirmPassword.errors?.['required']) || (confirmPassword.touched && registerForm.errors?.['passwordMismatch'])" />
+          <div class="error-msg" *ngIf="confirmPassword.touched && confirmPassword.errors?.['required']">Password is required</div>
+          <div class="error-msg" *ngIf="confirmPassword.touched && !confirmPassword.errors?.['required'] && registerForm.errors?.['passwordMismatch']">Passwords do not match</div>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full" [disabled]="loading">
+          {{ loading ? 'Creating account...' : 'Create Account' }}
+        </button>
+      </form>
+
+      <p class="auth-link">Already have an account? <a routerLink="/login">Sign in</a></p>
+    </div>
+  </div>
+</div>

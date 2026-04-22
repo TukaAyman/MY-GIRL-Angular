@@ -1,0 +1,125 @@
+.page-wrapper {
+  padding: 60px 0 80px;
+  background: linear-gradient(180deg, var(--bg) 0%, var(--soft-pink) 100%);
+  min-height: calc(100vh - 70px);
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeInUp 0.6s ease;
+
+  h1 { font-size: 2.6rem; margin-bottom: 10px; }
+  p { color: var(--muted-pink); font-size: 1.05rem; }
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cat-card {
+  background: var(--white);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  animation: fadeInUp 0.6s ease both;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+
+    .cat-visual {
+      transform: scale(1.05);
+    }
+
+    .cat-cta {
+      color: var(--dark-rose);
+      gap: 8px;
+    }
+  }
+}
+
+.cat-visual {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+/* Overlay خفيف فوق الصورة */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(183,110,121,0.2),
+    rgba(183,110,121,0.4)
+  );
+}
+
+/* اللمعة */
+.cat-shine {
+  position: absolute;
+  width: 150%;
+  height: 60%;
+  background: rgba(255,255,255,0.15);
+  top: -20%;
+  left: -25%;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+.cat-body {
+  padding: 24px 28px 28px;
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: var(--muted-pink);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+}
+
+.cat-cta {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: var(--transition);
+  letter-spacing: 0.3px;
+}
+
+.categories-footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footer-decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  span { color: var(--primary); font-size: 1.2rem; }
+  p { color: var(--muted-pink); font-size: 0.85rem; }
+}
+
+@media (max-width: 640px) {
+  .categories-grid { grid-template-columns: 1fr; }
+  .page-title h1 { font-size: 2rem; }
+}

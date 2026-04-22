@@ -1,0 +1,78 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="page-title">
+      <h1>Your Cart</h1>
+      <p>Review and checkout your selected items</p>
+    </div>
+
+    <div class="loading-wrap" *ngIf="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="order-success" *ngIf="orderPlaced">
+      <span class="success-icon">🎉</span>
+      <h3>Order Placed Successfully!</h3>
+      <p>Redirecting to your orders...</p>
+    </div>
+
+    <div class="empty-state" *ngIf="!loading && items.length === 0 && !orderPlaced">
+      <div class="empty-icon">🛒</div>
+      <h3>Your cart is empty</h3>
+      <p>Add some gorgeous products to get started</p>
+      <a routerLink="/categories" class="btn-primary">Shop Now</a>
+    </div>
+
+    <div class="cart-layout" *ngIf="!loading && items.length > 0">
+      <div class="cart-items">
+        <div class="cart-item" *ngFor="let item of items">
+          <div class="item-info">
+            <h4>{{ item.name }}</h4>
+            <p class="item-price-unit">${{ item.price.toFixed(2) }} each</p>
+          </div>
+
+          <div class="item-controls">
+            <div class="qty-controls">
+              <button (click)="item.quantity = item.quantity - 1; onQuantityChange(item)" [disabled]="item.quantity <= 1">−</button>
+              <input
+                type="number"
+                [(ngModel)]="item.quantity"
+                (change)="onQuantityChange(item)"
+                [min]="1"
+                class="qty-input"
+              />
+              <button (click)="item.quantity = item.quantity + 1; onQuantityChange(item)">+</button>
+            </div>
+
+            <span class="item-subtotal">${{ (item.price * item.quantity).toFixed(2) }}</span>
+
+            <button class="remove-btn" (click)="removeItem(item)" title="Remove">✕</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-summary">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+
+          <div class="summary-row" *ngFor="let item of items">
+            <span>{{ item.name }} × {{ item.quantity }}</span>
+            <span>${{ (item.price * item.quantity).toFixed(2) }}</span>
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span>${{ total.toFixed(2) }}</span>
+          </div>
+
+          <button class="btn-primary btn-checkout" (click)="placeOrder()" [disabled]="placingOrder">
+            {{ placingOrder ? 'Placing Order...' : '✓ Place Order' }}
+          </button>
+
+          <a routerLink="/categories" class="continue-link">← Continue Shopping</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

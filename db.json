@@ -1,0 +1,505 @@
+{
+  "users": [
+    {
+      "id": "mzz4t590XjQ",
+      "name": "Ahmed",
+      "email": "ahmed@shopzone.com",
+      "password": "12345678",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "name": "Sara",
+      "email": "sara@shopzone.com",
+      "password": "abcdefgh",
+      "role": "user"
+    },
+    {
+      "name": "toto",
+      "email": "toto@gmail.com",
+      "password": "t1234567",
+      "role": "user",
+      "id": "1"
+    },
+    {
+      "name": "tota",
+      "email": "tota@gmail.com",
+      "password": "12345678",
+      "role": "user",
+      "id": "-dEW7JUND3Y"
+    },
+    {
+      "name": "toty",
+      "email": "toty@gmail.com",
+      "password": "to12345678",
+      "role": "user",
+      "id": "TGlbyER1IaI"
+    },
+    {
+      "name": "totoo",
+      "email": "totoo@gmail.com",
+      "password": "to1234567",
+      "role": "user",
+      "id": "SYLONtg9l5g"
+    },
+    {
+      "name": "totoo",
+      "email": "totoo@gmail.com",
+      "password": "to123456",
+      "role": "user",
+      "id": "478f8IHFpVE"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Maybelline lipstick",
+      "price": 24.99,
+      "category": "Makeup",
+      "stock": 28,
+      "rating": 4.8,
+      "image": "https://img01.ztat.net/article/spp-media-p1/323c5236ff3046719400178aa2e61c33/acfa56552090480e92e9b6da035c6ea5.jpg?imwidth=1800&filter=packshot",
+      "description": "A luxurious rose-tinted velvet lipstick with long-lasting formula that keeps your lips moisturized all day."
+    },
+    {
+      "id": "2",
+      "name": "NARS Soft Matte Foundation",
+      "price": 38.5,
+      "category": "Makeup",
+      "stock": 28,
+      "rating": 4.6,
+      "image": "https://images.brownthomas.com/bta/2000156471_150580709_08.jpg?$pdp_zoom$",
+      "description": "Full coverage foundation with SPF30 protection. Gives a radiant, natural finish for all skin types."
+    },
+    {
+      "id": "3",
+      "name": "SHEGLAM Liquid Blush ",
+      "price": 32,
+      "category": "Makeup",
+      "stock": 24,
+      "rating": 4.7,
+      "image": "https://xoxo-eg.com/cdn/shop/products/SHEGLAM_Color_Bloom_Liquid_Blush_Matte_Finish_XOXO_Beauty_Cosmetics_8.jpg?v=1711572220",
+      "description": "A stunning 6-shade rosé blush palette with matte and shimmer finishes for every occasion."
+    },
+    {
+      "id": "4",
+      "name": " Essence Lash Princess False Lash Effect Mascara",
+      "price": 18.99,
+      "category": "Makeup",
+      "stock": 59,
+      "rating": 4.5,
+      "image": "https://www.pinkiabeauty.com/cdn/shop/products/25357A45-F8CE-48F7-B3E7-AF5EB3F16A90.jpg?v=1618609426",
+      "description": "Volumizing and lengthening mascara for dramatic, lash-defining results that last all day."
+    },
+    {
+      "id": "5",
+      "name": "Gangnam glow Spot Pink Vitamin Serum",
+      "price": 45,
+      "category": "Skincare",
+      "stock": 24,
+      "rating": 4.9,
+      "image": "https://m.media-amazon.com/images/I/51Re0YgyQTL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+      "description": "Deeply hydrating serum with hyaluronic acid to plump, firm and restore your skin's natural glow."
+    },
+    {
+      "id": "6",
+      "name": " Rosehip Fruit Oil & Vitamin C",
+      "price": 52,
+      "category": "Skincare",
+      "stock": 18,
+      "rating": 4.8,
+      "image": "https://m.media-amazon.com/images/I/61kavn7EQ5L.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+      "description": "100% pure rosehip oil packed with vitamins A, C and E to nourish and rejuvenate skin overnight."
+    },
+    {
+      "id": "7",
+      "name": "ESSANCE Pearl Whitening Cream",
+      "price": 39.99,
+      "category": "Skincare",
+      "stock": 35,
+      "rating": 4.6,
+      "image": "https://au.thefaceshop.com/cdn/shop/files/DR.BELMEUR_ESSANCE_Pearl_Whitening_Cream_2.jpg?v=1753250195",
+      "description": "Lightweight brightening moisturizer with pearl extract to even skin tone and enhance radiance."
+    },
+    {
+      "id": "8",
+      "name": "Banila Co Clean It Zero Cleansing Balm Original",
+      "price": 28,
+      "category": "Skincare",
+      "stock": 41,
+      "rating": 4.7,
+      "image": "https://moidaus.com/cdn/shop/products/1_8f53c6a5-ad46-4f1b-8efc-0bd98af32156.jpg?v=1758091465&width=1780",
+      "description": "Melting cleansing balm that removes makeup effortlessly while leaving skin soft and nourished."
+    },
+    {
+      "id": "9",
+      "name": "COCO MADEMOISELLE Eau de Parfum - CHANEL",
+      "price": 89,
+      "category": "Perfumes",
+      "stock": 15,
+      "rating": 4.9,
+      "image": "https://www.sephora.com/productimages/sku/s1213826-main-zoom.jpg",
+      "description": "A timeless rose fragrance with notes of Bulgarian rose, jasmine, and warm musk. 50ml EDP."
+    },
+    {
+      "id": "10",
+      "name": "Valentino Donna Born in Roma",
+      "price": 45,
+      "category": "Perfumes",
+      "stock": 25,
+      "rating": 4.6,
+      "image": "https://juleriaque.vtexassets.com/arquivos/ids/254606/1007994-01.jpg.jpg?v=638811886624170000",
+      "description": "Light and fresh cherry blossom body mist. Perfect for everyday wear with a feminine floral scent."
+    },
+    {
+      "id": "11",
+      "name": "Jean Paul Gaultier La Belle Le Parfum Eau de Parfum",
+      "price": 120,
+      "category": "Perfumes",
+      "stock": 6,
+      "rating": 4.8,
+      "image": "https://www.profumomaniaforever.com/wp-content/uploads/2021/03/La-Belle-EDP-Intense-600x600.jpg",
+      "description": "A sophisticated dark floral with notes of black rose, oud, and vanilla. A statement fragrance."
+    },
+    {
+      "id": "12",
+      "name": "Yves Saint Lauren Libre Le Parfum",
+      "price": 65,
+      "category": "Perfumes",
+      "stock": 18,
+      "rating": 4.5,
+      "image": "https://www.beirutdutyfree.com/media/products/8456_1705341488_ysllibreleparfum90-ezgif.com-png-to-webp-converter.webp",
+      "description": "Sweet and playful EDT with top notes of berries, heart of peony, and base of caramel musk."
+    },
+    {
+      "id": "13",
+      "name": "essie Enamel Nail Polish ",
+      "price": 29.99,
+      "category": "Manicure",
+      "stock": 38,
+      "rating": 4.7,
+      "image": "https://static.beautytocare.com/cdn-cgi/image/width=1600,height=1600,f=auto/media/catalog/product//e/s/essie-enamel-nail-polish-15-sugar-13-5ml.jpg",
+      "description": "Set of 6 nude gel polishes ranging from beige to dusty rose. Long-lasting chip-free formula."
+    },
+    {
+      "id": "14",
+      "name": "Nail Growth Serum | Nail Strengthening Serum",
+      "price": 14.99,
+      "category": "Manicure",
+      "stock": 48,
+      "rating": 4.6,
+      "image": "https://i5.walmartimages.com/seo/Nail-Strengthener-Growth-care-Built-in-Top-Base-Coat-Quick-Dry-Formula-Strong-Hardener-Polish-Damaged-Filler-Repair-care-Healthy-Smooth-Glossy-Finish_174b061c-914e-4340-8e45-01a1576ff176.5e67b1846679351930a34b13cda4dde5.jpeg",
+      "description": "Premium crystal glass nail files for a smooth, perfect finish. Gentle and precise."
+    },
+    {
+      "id": "15",
+      "name": "Rose Cuticle Oil",
+      "price": 19.5,
+      "category": "Manicure",
+      "stock": 50,
+      "rating": 4.8,
+      "image": "https://thehuntingtonstore.org/cdn/shop/files/106033_2048x.jpg?v=1721155896",
+      "description": "Nourishing rose-infused cuticle oil to soften, repair, and moisturize nails and surrounding skin."
+    },
+    {
+      "id": "16",
+      "name": "Pink Glitter Top Coat",
+      "price": 12.99,
+      "category": "Manicure",
+      "stock": 60,
+      "rating": 4.5,
+      "image": "https://cdn.notinoimg.com/social/essence/4059729467539_01-o/so-mesmerizing___240216.jpg",
+      "description": "Add a touch of sparkle with this rose-gold glitter top coat. Perfect for parties and special events."
+    }
+  ],
+  "cart": [
+    {
+      "userId": 2,
+      "productId": "1",
+      "quantity": 1,
+      "name": "Rose Velvet Lipstick",
+      "price": 24.99,
+      "id": "E2VxpXFR0dk"
+    },
+    {
+      "userId": 2,
+      "productId": "1",
+      "quantity": 3,
+      "name": "Rose Velvet Lipstick",
+      "price": 24.99,
+      "id": "HDKOlDzvGwo"
+    },
+    {
+      "userId": 2,
+      "productId": "1",
+      "quantity": 2,
+      "name": "Rose Velvet Lipstick",
+      "price": 24.99,
+      "id": "oMKxzKJVM6k"
+    },
+    {
+      "userId": "mzz4t590XjQ",
+      "productId": "2",
+      "quantity": 3,
+      "name": "Glow Foundation SPF30",
+      "price": 38.5,
+      "id": "TFbdnFHdWoE"
+    },
+    {
+      "userId": "1",
+      "productId": "4",
+      "quantity": 1,
+      "name": " Essence Lash Princess False Lash Effect Mascara",
+      "price": 18.99,
+      "id": "TRn5EV2Gc_w"
+    },
+    {
+      "userId": "SYLONtg9l5g",
+      "productId": "1",
+      "quantity": 4,
+      "name": "Maybelline lipstick",
+      "price": 24.99,
+      "id": "nmabbk4socY"
+    },
+    {
+      "userId": "SYLONtg9l5g",
+      "productId": "1",
+      "quantity": 4,
+      "name": "Maybelline lipstick",
+      "price": 24.99,
+      "id": "woKg1NLmi1o"
+    },
+    {
+      "userId": "SYLONtg9l5g",
+      "productId": "6",
+      "quantity": 1,
+      "name": " Rosehip Fruit Oil & Vitamin C",
+      "price": 52,
+      "id": "QlcT6ohkC7o"
+    },
+    {
+      "userId": "SYLONtg9l5g",
+      "productId": "6",
+      "quantity": 1,
+      "name": " Rosehip Fruit Oil & Vitamin C",
+      "price": 52,
+      "id": "j8ajJcgd4Ds"
+    }
+  ],
+  "orders": [
+    {
+      "userId": 2,
+      "total": 24.99,
+      "status": "pending",
+      "date": "2026-04-20T19:33:30.936Z",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Rose Velvet Lipstick",
+          "price": 24.99,
+          "quantity": 1
+        }
+      ],
+      "id": "JHhQXbrKeA0"
+    },
+    {
+      "userId": "TGlbyER1IaI",
+      "total": 99.96,
+      "status": "pending",
+      "date": "2026-04-21T07:44:08.425Z",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 1
+        },
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 3
+        }
+      ],
+      "id": "ZkKyNnf1zhU"
+    },
+    {
+      "userId": "-dEW7JUND3Y",
+      "total": 544.98,
+      "status": "pending",
+      "date": "2026-04-21T10:25:38.417Z",
+      "items": [
+        {
+          "productId": "5",
+          "name": "Hyaluronic Glow Serum",
+          "price": 45,
+          "quantity": 1
+        },
+        {
+          "productId": "5",
+          "name": "Hyaluronic Glow Serum",
+          "price": 45,
+          "quantity": 1
+        },
+        {
+          "productId": "5",
+          "name": "Hyaluronic Glow Serum",
+          "price": 45,
+          "quantity": 1
+        },
+        {
+          "productId": "5",
+          "name": "Hyaluronic Glow Serum",
+          "price": 45,
+          "quantity": 1
+        },
+        {
+          "productId": "5",
+          "name": "Hyaluronic Glow Serum",
+          "price": 45,
+          "quantity": 7
+        },
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 1
+        },
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 1
+        }
+      ],
+      "id": "dDlEPzjd4VY"
+    },
+    {
+      "userId": "-dEW7JUND3Y",
+      "total": 44.97,
+      "status": "pending",
+      "date": "2026-04-21T17:11:39.960Z",
+      "items": [
+        {
+          "productId": "14",
+          "name": "Nail Growth Serum | Nail Strengthening Serum",
+          "price": 14.99,
+          "quantity": 1
+        },
+        {
+          "productId": "14",
+          "name": "Nail Growth Serum | Nail Strengthening Serum",
+          "price": 14.99,
+          "quantity": 1
+        },
+        {
+          "productId": "14",
+          "name": "Nail Growth Serum | Nail Strengthening Serum",
+          "price": 14.99,
+          "quantity": 1
+        }
+      ],
+      "id": "pLheIV4enjk"
+    },
+    {
+      "userId": "-dEW7JUND3Y",
+      "total": 306.97,
+      "status": "pending",
+      "date": "2026-04-21T18:05:41.387Z",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 1
+        },
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 2
+        },
+        {
+          "productId": "8",
+          "name": "Banila Co Clean It Zero Cleansing Balm Original",
+          "price": 28,
+          "quantity": 4
+        },
+        {
+          "productId": "11",
+          "name": "Jean Paul Gaultier La Belle Le Parfum Eau de Parfum",
+          "price": 120,
+          "quantity": 1
+        }
+      ],
+      "id": "RpjPLgLdjdA"
+    },
+    {
+      "userId": "-dEW7JUND3Y",
+      "total": 816.89,
+      "status": "pending",
+      "date": "2026-04-21T20:52:31.693Z",
+      "items": [
+        {
+          "productId": "1",
+          "name": "Maybelline lipstick",
+          "price": 24.99,
+          "quantity": 5
+        },
+        {
+          "productId": "2",
+          "name": "NARS Soft Matte Foundation",
+          "price": 38.5,
+          "quantity": 2
+        },
+        {
+          "productId": "5",
+          "name": "Gangnam glow Spot Pink Vitamin Serum",
+          "price": 45,
+          "quantity": 3
+        },
+        {
+          "productId": "14",
+          "name": "Nail Growth Serum | Nail Strengthening Serum",
+          "price": 14.99,
+          "quantity": 1
+        },
+        {
+          "productId": "14",
+          "name": "Nail Growth Serum | Nail Strengthening Serum",
+          "price": 14.99,
+          "quantity": 3
+        },
+        {
+          "productId": "13",
+          "name": "essie Enamel Nail Polish ",
+          "price": 29.99,
+          "quantity": 2
+        },
+        {
+          "productId": "11",
+          "name": "Jean Paul Gaultier La Belle Le Parfum Eau de Parfum",
+          "price": 120,
+          "quantity": 3
+        }
+      ],
+      "id": "Mrv3Vd68Pss"
+    },
+    {
+      "userId": "478f8IHFpVE",
+      "total": 32,
+      "status": "pending",
+      "date": "2026-04-21T20:54:57.848Z",
+      "items": [
+        {
+          "productId": "3",
+          "name": "SHEGLAM Liquid Blush ",
+          "price": 32,
+          "quantity": 1
+        }
+      ],
+      "id": "l25_eooHjCg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

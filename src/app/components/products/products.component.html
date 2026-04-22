@@ -1,0 +1,48 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="page-header">
+      <button class="back-btn" (click)="goBack()">← Back</button>
+      <div class="page-title">
+        <h1>{{ category || 'All Products' }}</h1>
+        <p *ngIf="!loading">{{ products.length }} {{ products.length === 1 ? 'product' : 'products' }} found</p>
+      </div>
+    </div>
+
+    <div class="loading-wrap" *ngIf="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="empty-state" *ngIf="!loading && products.length === 0">
+      <div class="empty-icon">🛍️</div>
+      <h3>No products found</h3>
+      <p>Try a different category</p>
+      <button class="btn-primary" (click)="goBack()">Browse Categories</button>
+    </div>
+
+    <div class="products-grid" *ngIf="!loading && products.length > 0">
+      <a
+        *ngFor="let product of products; let i = index"
+        [routerLink]="['/products', product.id]"
+        class="product-card"
+        [style.animation-delay]="i * 0.07 + 's'"
+      >
+        <div class="product-img-wrap">
+          <img [src]="product.image" [alt]="product.name" loading="lazy" />
+          <div class="product-overlay">
+            <span>View Details</span>
+          </div>
+          <div class="product-badge" *ngIf="product.stock < 10 && product.stock > 0">Only {{ product.stock }} left!</div>
+          <div class="product-badge out" *ngIf="product.stock === 0">Out of Stock</div>
+        </div>
+        <div class="product-info">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <div class="stars">{{ getStars(product.rating) }}</div>
+          <div class="product-footer">
+            <span class="product-price">${{ product.price.toFixed(2) }}</span>
+            <span class="product-cat">{{ product.category }}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

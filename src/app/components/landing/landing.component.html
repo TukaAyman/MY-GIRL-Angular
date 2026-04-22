@@ -1,0 +1,338 @@
+<div class="landing">
+ 
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+ 
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="hero-pill">✦ New Collection 2025</span>
+        <h1 class="hero-title">
+          <em class="script-title">New</em>
+          Arrivals
+        </h1>
+        <p class="hero-sub">
+          Discover curated luxury beauty crafted for the modern woman.
+          Elegance in every drop, radiance in every touch.
+        </p>
+        <div class="hero-ctas">
+          <button class="btn-hero-primary" (click)="shopNow()">
+            <span>Shop Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn-hero-ghost" (click)="shopNow()">Explore Collections</button>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Lf6D4zsIMgNY8l9QhopxgmQv59cX1YaKhQ&s" alt="Customer" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Customer" />
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=40&h=40&fit=crop&crop=face" alt="Customer" />
+          </div>
+          <p><strong>50,000+</strong> happy customers</p>
+        </div>
+      </div>
+ 
+      <div class="hero-visual">
+        <div class="hero-main-img">
+          <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=560&h=680&fit=crop" alt="Luxury Beauty" />
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-float-card card-top">
+          <img src="https://img01.ztat.net/article/spp-media-p1/323c5236ff3046719400178aa2e61c33/acfa56552090480e92e9b6da035c6ea5.jpg?imwidth=1800&filter=packshot" alt="Lipstick" />
+          <div>
+            <strong>Rose Velvet Lip</strong>
+            <span>Bestseller ★4.9</span>
+          </div>
+        </div>
+        <div class="hero-float-card card-bottom">
+          <span class="card-icon">✨</span>
+          <div>
+            <strong>New Drop</strong>
+            <span>Summer Collection</span>
+          </div>
+        </div>
+        <div class="hero-sparkle sp1">✦</div>
+        <div class="hero-sparkle sp2">★</div>
+        <div class="hero-sparkle sp3">✦</div>
+      </div>
+    </div>
+ 
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+ 
+  <!-- ═══ STATS STRIP ═══ -->
+  <section class="stats-strip" id="stats">
+    <div class="container stats-inner">
+      <div class="stat-item" *ngFor="let s of stats; let i = index"
+           [class.reveal]="isVisible('stats')"
+           [style.transition-delay]="i * 0.12 + 's'">
+        <span class="stat-value">{{ s.value }}</span>
+        <span class="stat-label">{{ s.label }}</span>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ FEATURES — IMAGE + TEXT ═══ -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <div class="section-eyebrow" [class.reveal]="isVisible('features')">
+        <span class="eyebrow-line"></span>
+        <span>Our Expertise</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="section-title center" [class.reveal]="isVisible('features')">
+        Crafted for Your Beauty
+      </h2>
+ 
+      <div class="feature-rows">
+        <div class="feature-row" *ngFor="let f of features; let i = index"
+             [class.reverse]="i % 2 !== 0"
+             [class.reveal]="isVisible('features')"
+             [style.transition-delay]="i * 0.15 + 's'">
+          <div class="feature-img-box">
+            <img [src]="f.img" [alt]="f.title" loading="lazy" />
+            <div class="feature-img-tag">{{ f.tag }}</div>
+          </div>
+          <div class="feature-text-box">
+            <span class="feature-number">0{{ i + 1 }}</span>
+            <h3>{{ f.title }}</h3>
+            <p>{{ f.desc }}</p>
+            <button class="btn-feature" (click)="shopNow()">
+              Discover {{ f.tag }} →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ CATEGORIES ═══ -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-eyebrow" [class.reveal]="isVisible('categories')">
+        <span class="eyebrow-line"></span>
+        <span>Collections</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="section-title center" [class.reveal]="isVisible('categories')">Explore Our World</h2>
+      <p class="section-sub center" [class.reveal]="isVisible('categories')">Four universes of beauty, one destination</p>
+ 
+      <div class="cat-mosaic" [class.reveal]="isVisible('categories')">
+        <div class="cat-tile tile-large" (click)="shopNow()">
+          <img src="https://s.widget-club.com/images/YyiR86zpwIMIfrCZoSs4ulVD9RF3/f0afa94a4d601920bbed1706571a5f89/uro7nemGadjZvTQVIN3q.jpg?q=70&w=500" alt="Makeup" loading="lazy" />
+          <div class="tile-overlay">
+            <span class="tile-tag">01</span>
+            <h3>Makeup</h3>
+            <p>Lipsticks, Foundations & Palettes</p>
+            <span class="tile-cta">Shop Now →</span>
+          </div>
+        </div>
+        <div class="cat-tile tile-small" (click)="shopNow()">
+          <img src="https://png.pngtree.com/background/20230716/original/pngtree-cosmetic-product-in-white-tube-on-pink-background-3d-skin-care-picture-image_4237197.jpg" alt="Skincare" loading="lazy" />
+          <div class="tile-overlay">
+            <span class="tile-tag">02</span>
+            <h3>Skincare</h3>
+            <p>Serums & Moisturizers</p>
+            <span class="tile-cta">Shop Now →</span>
+          </div>
+        </div>
+        <div class="cat-tile tile-small" (click)="shopNow()">
+          <img src="https://blog.tallah-beauty.com/wp-content/uploads/2025/10/%D8%A7%D9%83%D8%AA%D8%B4%D9%81%D9%8A-%D8%A7%D9%94%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D8%B9%D8%B7%D9%88%D8%B1-%D8%A7%D9%84%D9%86%D8%B3%D8%A7%D9%8A%D9%94%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%AB%D9%8A%D8%B1%D8%A9_.jpg.webp" alt="Perfumes" loading="lazy" />
+          <div class="tile-overlay">
+            <span class="tile-tag">03</span>
+            <h3>Perfumes</h3>
+            <p>Luxury Fragrances</p>
+            <span class="tile-cta">Shop Now →</span>
+          </div>
+        </div>
+        <div class="cat-tile tile-wide" (click)="shopNow()">
+          <img src="https://wallpapers.com/images/hd/manicure-pictures-xcj7evy50d8pl6t4.jpg" alt="Manicure" loading="lazy" />
+          <div class="tile-overlay">
+            <span class="tile-tag">04</span>
+            <h3>Manicure</h3>
+            <p>Nail Polishes, Tools & Care</p>
+            <span class="tile-cta">Shop Now →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ MARQUEE STRIP ═══ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span *ngFor="let _ of [1,2,3,4,5,6,7,8,9,10]">
+        Luxury Beauty &nbsp;✦&nbsp; Cruelty Free &nbsp;✦&nbsp; Premium Quality &nbsp;✦&nbsp; Free Shipping &nbsp;✦&nbsp;
+      </span>
+    </div>
+  </div>
+ 
+  <!-- ═══ PROMISE / WHY US ═══ -->
+  <section class="promise-section" id="promise">
+    <div class="container">
+      <div class="promise-grid" [class.reveal]="isVisible('promise')">
+        <div class="promise-left">
+          <div class="section-eyebrow">
+            <span class="eyebrow-line"></span>
+            <span>Our Promise</span>
+            <span class="eyebrow-line"></span>
+          </div>
+          <h2 class="section-title">Beauty That <em class="script-inline">Cares</em></h2>
+          <p class="promise-desc">
+            We believe beauty and ethics go hand in hand. Every product in our collection
+            is rigorously tested, sourced with intention, and formulated to celebrate —
+            never compromise — your skin.
+          </p>
+          <button class="btn-promise" (click)="shopNow()">Discover Our Story →</button>
+        </div>
+ 
+        <div class="promise-cards">
+          <div class="promise-card" style="transition-delay:0.1s">
+            <div class="pcard-img">
+              <img src="https://moidaus.com/cdn/shop/products/1_8f53c6a5-ad46-4f1b-8efc-0bd98af32156.jpg?v=1758091465&width=1780" alt="Natural" />
+            </div>
+            <h4>100% Natural</h4>
+            <p>Only clean, certified ingredients that nourish and protect your skin naturally.</p>
+          </div>
+          <div class="promise-card" style="transition-delay:0.22s">
+            <div class="pcard-img">
+              <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?w=120&h=120&fit=crop" alt="Cruelty Free" />
+            </div>
+            <h4>Cruelty Free</h4>
+            <p>Certified cruelty-free. Beautiful products that respect all living beings.</p>
+          </div>
+          <div class="promise-card" style="transition-delay:0.34s">
+            <div class="pcard-img">
+              <img src="https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?w=120&h=120&fit=crop" alt="Luxury" />
+            </div>
+            <h4>Luxury Grade</h4>
+            <p>Premium formulations rivaling the world's finest beauty maisons at fair prices.</p>
+          </div>
+          <div class="promise-card" style="transition-delay:0.46s">
+            <div class="pcard-img">
+              <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=120&h=120&fit=crop" alt="Delivery" />
+            </div>
+            <h4>Free Delivery</h4>
+            <p>Complimentary shipping and elegant gift packaging on all orders over $50.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="testi-bg-img">
+      <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=1400&h=600&fit=crop" alt="Beauty background" />
+      <div class="testi-bg-overlay"></div>
+    </div>
+    <div class="container testi-inner" [class.reveal]="isVisible('testimonials')">
+      <div class="section-eyebrow light">
+        <span class="eyebrow-line light"></span>
+        <span>What They Say</span>
+        <span class="eyebrow-line light"></span>
+      </div>
+      <h2 class="section-title light">Loved by Thousands</h2>
+ 
+      <div class="testi-carousel">
+        <div class="testi-card" *ngFor="let t of testimonials; let i = index"
+             [class.active]="i === activeTestimonial"
+             [class.prev]="i === (activeTestimonial - 1 + testimonials.length) % testimonials.length"
+             [class.next]="i === (activeTestimonial + 1) % testimonials.length">
+          <div class="testi-quote">"</div>
+          <p class="testi-text">{{ t.text }}</p>
+          <div class="testi-author">
+            <div class="testi-avatar">{{ t.avatar }}</div>
+            <div>
+              <strong>{{ t.name }}</strong>
+              <span>{{ t.role }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="testi-dots">
+        <button *ngFor="let t of testimonials; let i = index"
+                class="testi-dot"
+                [class.active]="i === activeTestimonial"
+                (click)="setTestimonial(i)"></button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ FEATURED PRODUCTS PREVIEW ═══ -->
+  <section class="preview-section" id="preview">
+    <div class="container">
+      <div class="section-eyebrow" [class.reveal]="isVisible('preview')">
+        <span class="eyebrow-line"></span>
+        <span>Top Picks</span>
+        <span class="eyebrow-line"></span>
+      </div>
+      <h2 class="section-title center" [class.reveal]="isVisible('preview')">Bestsellers</h2>
+ 
+      <div class="preview-grid" [class.reveal]="isVisible('preview')">
+        <div class="preview-card" *ngFor="let p of [
+          {img:'https://img01.ztat.net/article/spp-media-p1/323c5236ff3046719400178aa2e61c33/acfa56552090480e92e9b6da035c6ea5.jpg?imwidth=1800&filter=packshot', name:'Maybelline lipstick', cat:'Makeup', price:'$24.99', rating:'★★★★★'},
+          {img:'https://m.media-amazon.com/images/I/51Re0YgyQTL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg', name:'Gangnam glow Spot Pink Vitamin Serum', cat:'Skincare', price:'$45.00', rating:'★★★★★'},
+          {img:'https://www.beirutdutyfree.com/media/products/8456_1705341488_ysllibreleparfum90-ezgif.com-png-to-webp-converter.webp', name:'Yves Saint Lauren Libre Le Parfum', cat:'Perfumes', price:'$89.00', rating:'★★★★★'},
+          {img:'https://i5.walmartimages.com/seo/Nail-Strengthener-Growth-care-Built-in-Top-Base-Coat-Quick-Dry-Formula-Strong-Hardener-Polish-Damaged-Filler-Repair-care-Healthy-Smooth-Glossy-Finish_174b061c-914e-4340-8e45-01a1576ff176.5e67b1846679351930a34b13cda4dde5.jpeg', name:'Nail Growth Serum | Nail Strengthening Serum', cat:'Manicure', price:'$29.99', rating:'★★★★☆'}
+        ]">
+          <div class="pcard-img-wrap">
+            <img [src]="p.img" [alt]="p.name" loading="lazy" />
+            <div class="pcard-hover">
+              <button class="btn-quick" (click)="shopNow()">Quick Shop</button>
+            </div>
+          </div>
+          <div class="pcard-info">
+            <span class="pcard-cat">{{ p.cat }}</span>
+            <h4>{{ p.name }}</h4>
+            <div class="pcard-row">
+              <span class="pcard-stars">{{ p.rating }}</span>
+              <span class="pcard-price">{{ p.price }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
+      <div class="preview-cta" [class.reveal]="isVisible('preview')">
+        <button class="btn-hero-primary" (click)="shopNow()">
+          <span>View All Products</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══ CTA NEWSLETTER ═══ -->
+  <section class="cta-section" id="cta">
+    <div class="cta-shapes">
+      <div class="cta-orb cta-orb-1"></div>
+      <div class="cta-orb cta-orb-2"></div>
+    </div>
+    <div class="container cta-inner" [class.reveal]="isVisible('cta')">
+      <div class="cta-icon-row">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=80&h=80&fit=crop" alt="" />
+        <img src="https://img.pikbest.com/backgrounds/20250707/beauty-blooms-makeup-soft-rose-tones-flat-lay_11784618.jpg!f305cw" alt="" />
+        <img src="https://i.pinimg.com/736x/4e/25/61/4e2561480756041eb17a143f285f9d50.jpg" alt="" />
+      </div>
+      <h2 class="cta-title"><em class="script-inline">Stay in the</em> Loop</h2>
+      <p class="cta-sub">Be first for new arrivals, exclusive member offers, and beauty secrets.</p>
+      <div class="cta-form">
+        <input type="email" placeholder="Enter your email address" />
+        <button class="btn-cta-submit" (click)="shopNow()">
+          Join & Save 15%
+        </button>
+      </div>
+      <p class="cta-note">✦ No spam ever &nbsp;·&nbsp; Unsubscribe anytime &nbsp;·&nbsp; Members-only perks</p>
+    </div>
+  </section>
+ 
+</div>
+ 

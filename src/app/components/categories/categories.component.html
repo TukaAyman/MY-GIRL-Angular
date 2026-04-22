@@ -1,0 +1,39 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="page-title">
+      <h1>Shop by Category</h1>
+      <p>Choose your beauty world and explore our curated collections</p>
+    </div>
+
+    <div class="categories-grid">
+      <div
+        *ngFor="let cat of categories; let i = index"
+        class="cat-card"
+        [style.animation-delay]="i * 0.1 + 's'"
+        (click)="selectCategory(cat.name)"
+      >
+        <div
+          class="cat-visual"
+          [style.background-image]="'url(' + cat.image + ')'"
+        >
+          <div class="overlay"></div>
+          <div class="cat-shine"></div>
+        </div>
+
+        <div class="cat-body">
+          <h2>{{ cat.label }}</h2>
+          <p>{{ cat.description }}</p>
+          <span class="cat-cta">Explore Collection →</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="categories-footer">
+      <div class="footer-decor">
+        <span>✦</span>
+        <p>Free shipping on orders over $50 · Gift wrapping available · 100% cruelty-free</p>
+        <span>✦</span>
+      </div>
+    </div>
+  </div>
+</div>

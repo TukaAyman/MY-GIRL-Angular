@@ -1,0 +1,71 @@
+<div class="page-wrapper">
+  <div class="container">
+    <div class="loading-wrap" *ngIf="loading">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="detail-layout" *ngIf="!loading && product">
+      <button class="back-btn" (click)="goBack()">← Back to {{ product.category }}</button>
+
+      <div class="detail-grid">
+        <!-- Image -->
+        <div class="detail-img-wrap">
+          <img [src]="product.image" [alt]="product.name" />
+          <div class="img-badge" *ngIf="product.stock === 0">Out of Stock</div>
+          <div class="img-badge low" *ngIf="product.stock > 0 && product.stock < 10">
+            Only {{ product.stock }} left!
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="detail-info">
+          <span class="detail-category">{{ product.category }}</span>
+          <h1 class="detail-name">{{ product.name }}</h1>
+
+          <div class="detail-rating">
+            <span class="stars">{{ getStars(product.rating) }}</span>
+            <span class="rating-val">{{ product.rating }}/5</span>
+          </div>
+
+          <p class="detail-price">${{ product.price.toFixed(2) }}</p>
+          <p class="detail-desc">{{ product.description }}</p>
+
+          <div class="detail-stock" [class.out]="product.stock === 0">
+            <span *ngIf="product.stock > 0">✓ In Stock ({{ product.stock }} available)</span>
+            <span *ngIf="product.stock === 0">✗ Out of Stock</span>
+          </div>
+
+          <!-- Quantity -->
+          <div class="quantity-wrap" *ngIf="product.stock > 0">
+            <label>Quantity</label>
+            <div class="qty-controls">
+              <button (click)="decrement()" [disabled]="quantity <= 1">−</button>
+              <span class="qty-display">{{ quantity }}</span>
+              <button (click)="increment()" [disabled]="quantity >= product.stock">+</button>
+            </div>
+          </div>
+
+          <!-- Add to Cart -->
+          <div class="cart-actions">
+            <button
+              class="btn-primary btn-cart"
+              (click)="addToCart()"
+              [disabled]="product.stock === 0 || addingToCart"
+            >
+              <span *ngIf="!addingToCart && !addedToCart">🛒 Add to Cart</span>
+              <span *ngIf="addingToCart">Adding...</span>
+              <span *ngIf="addedToCart">✓ Added to Cart!</span>
+            </button>
+            <button class="btn-outline" routerLink="/cart">View Cart</button>
+          </div>
+
+          <div class="detail-features">
+            <div class="feat"><span>🌸</span><p>100% cruelty-free & natural</p></div>
+            <div class="feat"><span>💝</span><p>Free shipping over $50</p></div>
+            <div class="feat"><span>🎀</span><p>Elegant gift packaging</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

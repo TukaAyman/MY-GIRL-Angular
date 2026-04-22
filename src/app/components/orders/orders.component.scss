@@ -1,0 +1,99 @@
+.page-wrapper { min-height: calc(100vh - 70px); padding: 40px 0 80px; }
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease both;
+  transition: var(--transition);
+  &:hover { box-shadow: var(--shadow-hover); }
+}
+
+.order-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, var(--bg), var(--soft-pink));
+  border-bottom: 1px solid var(--soft-pink);
+}
+
+.order-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.order-id {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-rose);
+}
+
+.order-date {
+  font-size: 0.78rem;
+  color: var(--muted-pink);
+}
+
+.order-status {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+
+  &.status-pending { background: #fef9e7; color: #d4ac0d; border: 1px solid #fdeaa7; }
+  &.status-processing { background: #ebf5fb; color: #2980b9; border: 1px solid #aed6f1; }
+  &.status-delivered { background: #eafaf1; color: #1e8449; border: 1px solid #a9dfbf; }
+  &.status-cancelled { background: #fdedec; color: #c0392b; border: 1px solid #f1948a; }
+}
+
+.order-items {
+  padding: 16px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  align-items: center;
+  font-size: 0.88rem;
+
+  .item-name { color: var(--text); }
+  .item-qty { color: var(--muted-pink); text-align: center; }
+  .item-price { color: var(--dark-rose); font-weight: 600; text-align: right; }
+}
+
+.order-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  background: var(--bg);
+  border-top: 1px solid var(--soft-pink);
+}
+
+.order-count { font-size: 0.82rem; color: var(--muted-pink); }
+
+.order-total {
+  font-size: 0.95rem;
+  color: var(--text);
+  strong { color: var(--dark-rose); font-size: 1.05rem; }
+}
+
+@media (max-width: 560px) {
+  .order-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .order-item { grid-template-columns: 1fr auto; .item-qty { display: none; } }
+}
