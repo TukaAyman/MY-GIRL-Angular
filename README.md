@@ -1,55 +1,149 @@
-<<<<<<< HEAD
+# 🛍️ My Girl — Angular E-Commerce App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+<p align="center">
+  <img src="https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/SCSS-Styled-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
+  <img src="https://img.shields.io/badge/JSON_Server-REST_API-lightgrey?style=for-the-badge" />
+</p>
 
+<p align="center">
+  A fully functional e-commerce web application built with Angular — featuring authentication, product browsing, cart management, and order tracking.
+</p>
 
-To start a local development server, run:
+---
+
+## ✨ Features
+
+- 🔐 **Authentication** — Login & Register with route guards and HTTP interceptors
+- 🏠 **Landing Page** — Welcoming homepage to showcase the store
+- 🗂️ **Categories** — Browse products by category
+- 📦 **Products** — Full product listing with search/filter support
+- 🔍 **Product Detail** — Detailed view for each product
+- 🛒 **Cart** — Add, update, and remove items
+- 📋 **Orders** — View order history
+- 👤 **Profile** — Manage user account info
+- 🚧 **404 Not Found** — Custom fallback page
+- 🔒 **Auth Guard** — Protect private routes
+- 🌐 **HTTP Interceptor** — Auto-attach auth tokens to API requests
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── cart/
+│   │   ├── categories/
+│   │   ├── landing/
+│   │   ├── login/
+│   │   ├── navbar/
+│   │   ├── not-found/
+│   │   ├── orders/
+│   │   ├── product-detail/
+│   │   ├── products/
+│   │   ├── profile/
+│   │   └── register/
+│   ├── guards/
+│   │   └── auth.guard.ts
+│   ├── interceptors/
+│   │   └── auth.interceptor.ts
+│   ├── models/
+│   │   ├── cart.model.ts
+│   │   ├── order.model.ts
+│   │   ├── product.model.ts
+│   │   └── user.model.ts
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── cart.service.ts
+│   │   ├── order.service.ts
+│   │   └── product.service.ts
+│   ├── app.config.ts
+│   ├── app.routes.ts
+│   └── app.ts
+├── index.html
+├── main.ts
+└── styles.scss
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js `>=18`
+- Angular CLI `>=17`
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/your-username/my-girl.git
+
+# Navigate to project directory
+cd my-girl
+
+# Install dependencies
+npm install
+```
+
+### Run the App
+
+```bash
+# Start JSON Server (mock backend)
+npx json-server --watch db.json --port 3000
+
+# Start Angular dev server
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open your browser at `http://localhost:4200`
 
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tech Stack
 
-```bash
-ng generate component component-name
-```
+| Technology | Purpose |
+|---|---|
+| Angular 19 | Frontend framework |
+| TypeScript | Type-safe development |
+| SCSS | Styling |
+| RxJS | Reactive state & HTTP |
+| JSON Server | Mock REST API backend |
+| Angular Router | Client-side routing |
+| HTTP Interceptors | Token injection |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📸 Pages Overview
 
+| Page | Route | Access |
+|---|---|---|
+| Landing | `/` | Public |
+| Login | `/login` | Public |
+| Register | `/register` | Public |
+| Categories | `/categories` | Protected |
+| Products | `/products` | Protected |
+| Product Detail | `/products/:id` | Protected |
+| Cart | `/cart` | Protected |
+| Orders | `/orders` | Protected |
+| Profile | `/profile` | Protected |
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🤝 Contributing
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Pull requests are welcome! For major changes, please open an issue first to discuss what you'd like to change.
 
+---
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 📄 License
 
-```bash
-ng test
-```
+This project is licensed under the terms in the [LICENSE](./LICENSE) file.
 
+---
 
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
->>>>>>> 3e9b73b22793c5350208f5b5c34f06a57d5106dc
+<p align="center">Made with ❤️ using Angular</p>
